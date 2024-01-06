@@ -34,4 +34,32 @@ let MyObj= {
 }
 
 console.log(MyObj);
-console.log(MyFuction);
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Memory Mangement in Js
+
+//Two type of memory is use to store data
+//Stack(primitive) and Heap(non-primitive)
+
+//Stack Memory --> give copy of value
+let MyName = "Raj"
+let NewName = MyName
+NewName = "Rajendra"
+
+console.log(MyName);
+console.log(NewName);
+
+//Heap Memory --> Give direct reference of value
+
+let userOne = {
+    email: "Raj@gmail.com",
+    upi: "raj@icic"
+}
+
+let userTwo = userOne
+
+userTwo.email = "Rajendra@gmai.com"
+
+console.log(userOne);
+console.log(userTwo);
