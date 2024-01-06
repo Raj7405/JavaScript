@@ -20,8 +20,21 @@ let score="raj"
 let a ;
 let b = Boolean(a)
 
-console.log(a);
-console.log(b);
-console.log(typeof b);
+//console.log(a);
+//console.log(b);
+//console.log(typeof b);
 
 //null => False
+
+//  *********************** Operations ***********************
+
+let x=4
+let y=x++
+
+console.log(`x:${x}, y:${y}`);
+
+let p =4
+let q =++p
+
+console.log(`p:${p}, q:${q}`);
+
