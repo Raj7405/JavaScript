@@ -7,13 +7,13 @@ let myDate = new Date()
 //   console.log(myDate.toLocaleDateString());
 //   console.log(typeof myDate);
 
-// let myCreateDate = new Date("12-2-2001")
-// console.log(myCreateDate.toLocaleString());
+let myCreateDate = new Date("12-2-2001")
+console.log(myCreateDate.toLocaleString());
 
-// let myTimestamp =Date.now()
-// console.log(myTimestamp);
-// let newTime = .getTime()
-// console.log(myTimestamp - newTime);
+let myTimestamp =Date.now()
+console.log(myTimestamp);
+let newTime = myCreateDate.getTime()
+console.log(myTimestamp - newTime);
 
 let newDate = new Date()
 // console.log(newDate);
@@ -26,9 +26,9 @@ let newDate = new Date()
 
 //create obeject of date
 
-let a = newDate.toLocaleString('default', {
-    weekday: "short",
-    year: "2-digit"
-})
+// let a = newDate.toLocaleString('default', {
+//     weekday: "short",
+//     year: "2-digit"
+// })
 
-console.log(a);
+// console.log(a);
