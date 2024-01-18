@@ -34,6 +34,7 @@ map.set('IN', "India")
 
 //console.log(map);
 
+//here we distructuring our map
 for (const [key, value] of map) {
     // console.log(key, ':-', value);
 }
@@ -42,6 +43,7 @@ const myObject = {
     game1: 'NFS',
     game2: 'Spiderman'
 }
+//herte object are not iteratable... for that we use "For In loop"
 
 // for (const [key, value] of myObject) {
 //     console.log(key, ':-', value);
