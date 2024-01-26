@@ -1,4 +1,4 @@
-//two to declare function 
+//two way to declare function 
 
 myFunc1(5);
 function myFunc1(num){

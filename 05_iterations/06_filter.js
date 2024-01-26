@@ -40,6 +40,6 @@ const books = [
 ];
   
 let userBook = books.filter((bk) => { 
-    return bk.genre = 'Non-Fiction' && bk.edition < 2004
+    return bk.genre =='Non-Fiction' && bk.edition < 2004
 })
 console.log(userBook);

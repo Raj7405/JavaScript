@@ -9,9 +9,9 @@ function printMe(item){
 }
 
 coding.forEach((item, index, Arr) => {
-    //console.log(`${item} on index no. ${index} in array ${Arr}`);
+    console.log(`${item} on index no. ${index} in array ${Arr}`);
     // console.log(item, index, Arr);
-    console.log(item + "on index no." + index + "in array" + Arr);
+    //console.log(item + "on index no." + index + "in array" + Arr);
 })
 //coding.forEach(printMe)
 
