@@ -27,12 +27,15 @@
     // console.log(parent.firstElementChild)
     // console.log(parent.lastElementChild)
 
+    //child to parent
     const dayOne = document.querySelector('.day')
-    console.log(dayOne)
-    console.log(dayOne.parentElement)
-    console.log(dayOne.nextElementSibling)
+    //console.log(dayOne)
+    // console.log(dayOne.parentElement)
+    // console.log(dayOne.nextElementSibling)
     dayOne.nextElementSibling.style.color = 'white'
     childArray[2].style.color = 'green'
-
+ 
+    //this will give list of all node in DOM tree
+    console.log("NODES: ", parent.childNodes);
 </script>
 </html>
