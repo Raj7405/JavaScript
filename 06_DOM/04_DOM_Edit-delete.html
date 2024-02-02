@@ -12,18 +12,18 @@
 </body>
 <script>
     function addLanguage(langName){
-        const li = document.createElement('li');
-        li.innerHTML=`${langName}`;
-        document.querySelector('.language').appendChild(li)
+        const list = document.createElement('li');
+        list.innerHTML=`${langName}`;
+        document.querySelector('.language').appendChild(list)
     }
     addLanguage("python")
     addLanguage("typescript")
     
     function addLangOptimizly(langName){
-        const li = document.createElement('li')
+        const list = document.createElement('li')
         //created textNode in li and appended it into li list
-        li.appendChild(document.createTextNode(langName)) 
-        document.querySelector('.language').appendChild(li)
+        list.appendChild(document.createTextNode(langName)) 
+        document.querySelector('.language').appendChild(list)
     }
     addLangOptimizly("golang")
 
