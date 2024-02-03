@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+    <style>
+        body{
+            background-color: #212120;
+            color: aliceblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="first">
+        <div class="heading">
+            <h1 id="head1">
+                Rajendra Mohan Chaudhari
+            </h1>
+            <hr>
+        </div>
+        <div class="skills">
+            <ul class="list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>React Js</li>
+            </ul>
+        </div>
+    </div>
+    <div class="second">
+        <div class="headin2"></div>
+        <div class="Edu_lsit"></div>
+    </div>
+    
+</body>
+<script>
+    //parent node selected
+    const myDiv = document.querySelector('.second')
+    const myHead = myDiv.childNodes[1]
+    const myList = myDiv.childNodes[3]
+
+    //first child node is created 
+    const H2 = document.createElement('h2')
+    H2.appendChild(document.createTextNode('Education'))
+
+    myHead.appendChild(H2)
+
+    //second child node to created
+    const List = document.createElement('ol')
+    List.className = 'Edu'
+    myList.appendChild(List)
+
+    function addEducation(course,cllgName){
+        const Li = document.createElement('li')
+        Li.appendChild(document.createTextNode(`${course} at ${cllgName}`))
+        List.appendChild(Li)
+    }
+    
+    addEducation("BE","Pacific School Of Engineering")
+    addEducation("HSC","Lions International School")
+    addEducation("SSC","Saraswati Vidya Mandir")
+
+    //changes in first Div
+    const firstDiv = document.querySelectorAll('div')
+    const skillclass=firstDiv[2]
+
+    const title = document.createElement('h2')
+    title.appendChild(document.createTextNode('Skills'))
+    skillclass.prepend(title)
+
+
+    //adding profile photo
+    const image = document.createElement('img')
+    image.src = ""
+  
+
+    
+   //test area
+   console.log(myDiv) 
+   console.log(myHead)
+   console.log(myList)
+   console.log(firstDiv)
+   console.log(document.querySelector('.first'))
+</script>
+</html>
