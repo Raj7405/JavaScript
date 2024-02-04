@@ -14,12 +14,13 @@
 </head>
 <body>
     <div class="first">
-        <div class="heading">
+        <div class="heading" id="head">
             <h1 id="head1">
                 Rajendra Mohan Chaudhari
             </h1>
-            <hr>
         </div>
+        <hr>
+
         <div class="skills">
             <ul class="list">
                 <li>HTML</li>
@@ -32,6 +33,12 @@
     <div class="second">
         <div class="headin2"></div>
         <div class="Edu_lsit"></div>
+    </div>
+    <div class="third">
+        <div class="discription">
+            <h2>My Self</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, dolorum. Quod maxime tenetur placeat? Sunt, recusandae quo itaque quae ratione illum hic labore quos in expedita maiores! Possimus illo nostrum quis, nemo laborum iure blanditiis, laboriosam aliquid commodi atque voluptatum!</p>
+        </div>
     </div>
     
 </body>
@@ -73,7 +80,17 @@
 
     //adding profile photo
     const image = document.createElement('img')
-    image.src = "/workspaces/JavaScript/Asset/Rajendra Chaudhari.jpg"
+    image.src = "Rajendra Chaudhari.jpg"
+    image.style.width = "80px"
+    image.style.height = "80px"
+    image.style.borderRadius = "70%"
+
+    //appending image tag
+    const titleDiv = document.querySelectorAll('div')
+    titleDiv[1].style.display = "flex"
+    titleDiv[1].style.gap = "20px"
+    titleDiv[1].prepend(image)
+
     
     
     //test area
