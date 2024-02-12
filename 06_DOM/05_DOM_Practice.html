@@ -8,6 +8,7 @@
         body{
             background-color: #212120;
             color: aliceblue;
+            width: 800px;
         }
 
     </style>
@@ -39,6 +40,9 @@
             <h2>My Self</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, dolorum. Quod maxime tenetur placeat? Sunt, recusandae quo itaque quae ratione illum hic labore quos in expedita maiores! Possimus illo nostrum quis, nemo laborum iure blanditiis, laboriosam aliquid commodi atque voluptatum!</p>
         </div>
+    </div>
+    <div class="fourth">
+        
     </div>
     
 </body>
@@ -91,14 +95,45 @@
     titleDiv[1].style.gap = "20px"
     titleDiv[1].prepend(image)
 
-    
-    
+
+    //fourth Div for Certificates
+
+    // const fourth = document.getElementsByClassName("fourth")
+    const fourth = document.querySelector(".fourth")
+
+    const certy = document.createElement('h2')
+    certy.appendChild(document.createTextNode('Certificate'))
+    fourth.appendChild(certy)
+
+    const certyDiv = document.createElement('div')
+    fourth.appendChild(certyDiv)
+    console.log(certyDiv)
+    function addCertyName(name){
+        const certyName = document.createElement('h3')
+        certyName.appendChild(document.createTextNode(name))  //when passing argument in function not to use ""/'' 
+        certyDiv.appendChild(certyName)
+        
+    }
+    function addCertyYear(year){
+        const certyDate = document.createElement('h4')
+        certyDate.appendChild(document.createTreeWalker(year)) //just pass argument 
+        certyDiv.appendChild(certyDate)
+    }
+    function addcertyInfo(info){
+        const certyInfo = document.createElement('p')
+        certyInfo.appendChild(document.createTextNode(info))
+        certyDiv.appendChild(certyInfo)
+    }
+    addCertyName("Code Unnati Program (SAP) (2023-2024)")
+    addcertyInfo("the training on Emerging Technologies (Artificial Intelligence, Internet of Things, & Enterprise Resource Planning) .")
+
     //test area
     // console.log(myDiv) 
     // console.log(myHead)
     // console.log(myList)
     // console.log(firstDiv)
     // console.log(document.querySelector('.first'))
-    console.log(document.getElementsByClassName('.heading'))
+    // console.log(document.getElementsByClassName('heading'))
+    console.log(fourth)
 </script>
 </html>
