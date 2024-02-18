@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #414141;
+        }
+        #btn {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            width: 400px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">
+        machine is off
+    </button>
+</body>
+<script>
+ 
+    const btn = document.getElementById('btn')
+ 
+    let flag = true
+    btn.addEventListener('click', function(e){
+    
+        if(flag){
+            btn.innerHTML = 'machine is on'
+            flag = false
+        } else if(!flag){
+            btn.innerHTML = 'machine is off'
+            flag = true
+        }
+    }) 
+</script>
+</html>
