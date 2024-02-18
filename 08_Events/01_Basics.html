@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+ /** 
+    //way to use Event or handle Ehvents
+    //1
+   
+    document.getElementById('owl').onclick = function(){
+        alert("clicked on owl")
+    }
+  */
+
+    // attachEvent() --.in old days
+    //jQuery --> on()
+  
+    //2 -this is rigth way as wel as good practice
+  
+    document.getElementById('japan').addEventListener('click', function(e){
+        console.log("clicked on japan")
+    }, false)
+
+    /*
+    propogation of Event 
+    --> Bubbling : when event are propagate form inside to outside its called Bubbling
+                  - it is default behaviour of event 
+                  - parameter are set default is "false"
+
+    --> Capturing : when event are propagate from outsode to inside its called Capturing
+                  - it is not default but can be achived by setting parameter "true"
+                
+    */
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked on any element opf list")
+    // }, false /*true*/) //-->it propagate top to bottom :Capturing method
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("clicked on owl ")
+    //     e.stopPropagation()
+    // }, false )
+
+    // /*
+    //  --> .stopPropagation() : it will prevent event to bubble up from inside, only propagate core event
+    // */
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("clicked Google");
+    // })
+  
+    document.querySelector("#images").addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+    })
+     //removeIt.parentNode.removeChild(removeIt)
+</script>
+</html>
