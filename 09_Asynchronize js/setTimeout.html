@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">hello! my name is....</h1>
+    <button>Reveal</button>
+</body>
+<script>
+    const head = document.getElementById('head')
+
+    const changeHead = function(){
+        const h2 = document.createElement('h1')
+        h2.appendChild(document.createTextNode('Rajendra Mohan Chaudhari'))
+        head.appendChild(h2)
+    }
+
+    document.querySelector('button').addEventListener('click',function(){
+        setTimeout(changeHead, 2000)
+    })
+
+    
+</script>
+</html>
