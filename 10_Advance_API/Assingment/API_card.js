@@ -19,13 +19,13 @@ function callApi(Url_link) {
   xhr.onload = function () {
     const data = JSON.parse(this.responseText);
     //call from here to make card
-    addImage(data.avatar_url);
+    addImage(data);
     addName(data.name)
     addBio(data.bio)
     addFollowers(data.followers)
 
     //test
-    console.log(data);
+    console.log(data.url);
   };
   xhr.send();
 }
@@ -41,10 +41,10 @@ function callApi(Url_link) {
 // //   console.log(typeof profile_img);
 // //   console.log(img);
 // }
-function addImage(profile_img) {
+function addImage(userData) {
   const image = document.getElementById("img");
   const img = document.createElement("img");
-  img.src = `${profile_img}`;
+  img.src = `${userData.avatar_url}`;
   img.classList.add('profile-img'); // Add a class to the img element for styling purposes
   image.appendChild(img);
 }
@@ -62,7 +62,7 @@ function addBio(profile_bio){
     const bio = document.getElementById('bio');
     const p = document.createElement('p');
     p.id = 'profile_Bio'
-    p.innerHTML = `${profile_bio}`
+    p.innerHTML = `<b>Bio: </b>${profile_bio}`
     bio.appendChild(p)
 }
 
