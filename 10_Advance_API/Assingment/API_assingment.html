@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="card.css" type="text/css">
   </head>
 
-  <body style="background-color: #212121; color: aliceblue">
+  <body >
+    <nav class="nav-bar">
+      <h2>Github Card fetcher</h2>
+    </nav>
     <div class="container">
       <div class="head">
         <form id="input-link">
@@ -17,11 +20,11 @@
         </form>
       </div>
       <div class="card" >
-          <div id="img"></div>
+          <div id="img" class="img"></div>
           <div id="name"></div>
           <div id="bio"></div>
           <div id="followers"></div>
-        </div>
+      </div>
     </div>
   </body>
   <script src="API_card.js"></script>

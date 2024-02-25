@@ -30,16 +30,25 @@ function callApi(Url_link) {
   xhr.send();
 }
 
+// function addImage(profile_img) {
+//   const image = document.getElementById("img");
+//   const img = document.createElement("img");
+//   img.src = `${profile_img}`;
+//   image.classList.add('img')
+//   image.appendChild(img);
+
+//   //test
+// //   console.log(typeof profile_img);
+// //   console.log(img);
+// }
 function addImage(profile_img) {
   const image = document.getElementById("img");
   const img = document.createElement("img");
   img.src = `${profile_img}`;
+  img.classList.add('profile-img'); // Add a class to the img element for styling purposes
   image.appendChild(img);
-
-  //test
-//   console.log(typeof profile_img);
-//   console.log(img);
 }
+
 
 function addName(profile_name){
     const name  = document.getElementById("name");
@@ -61,6 +70,6 @@ function addFollowers(profile_follower){
     const followers = document.getElementById('followers');
     const h4 = document.createElement('h4');
     h4.id = 'profile_Follower'
-    h4.innerHTML = `${profile_follower}`
+    h4.innerHTML = `Followers: ${profile_follower}`
     followers.appendChild(h4)
 }
