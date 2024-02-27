@@ -10,7 +10,7 @@ btn.addEventListener("click", function (e) {
 });
 
 function callApi(Url_link) {
-    input.value = '';
+  input.value = '';
   console.log(Url_link);
   const xhr = new XMLHttpRequest();
   xhr.open("GET", Url_link);
