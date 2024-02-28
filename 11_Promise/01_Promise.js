@@ -70,7 +70,7 @@ promiseFour.then((obj) =>{
 .finally(() => { console.log("The promise four is either resolved or rejected")})
 
 
-//Fifth Promise using asyn-await
+//Fifth Promise using async-await
 const promiseFive = new Promise(function(resolve, reject){
     setTimeout(function(){
         let error = false
