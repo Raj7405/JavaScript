@@ -31,7 +31,7 @@ const promiseThree = new Promise((resole,reject)=>{
             resole({userName: 'Raj', age: 21});
         }
         else{
-            console.log("ERROR: Something Went Wrong!")
+            reject("ERROR: Something Went Wrong!")
         }
     }, 3000)
 })
@@ -52,15 +52,56 @@ const promiseFour = new Promise((resole,reject)=>{
             resole({userName: 'Raj', age: 21});
         }
         else{
-            console.log("ERROR: Something Went Wrong!")
+            reject("ERROR: Something Went Wrong!")
         }
     },4000)
 })
+
 promiseFour.then((obj) =>{
     return obj
-}).then((user) => {
+})
+.then((user) => {
     console.log(user.userName)
     console.log("-> four consumed!")
-}).catch((error)=>{
+})
+.catch((error)=>{
     console.log(error);
 })
+.finally(() => { console.log("The promise four is either resolved or rejected")})
+
+
+//Fifth Promise using asyn-await
+const promiseFive = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        let error = false
+        if (!error) {
+            console.log("5: promise Five is created ")
+            resolve({username: "javascript", password: "123"})
+        } else {
+            reject('ERROR: JS went wrong')
+        }
+    }, 5000)
+})
+
+async function consumedPromiseFive(){
+    try{
+        const response = await promiseFive;
+        console.log(response);
+        console.log("-> Five Consumed ")
+    } catch(error){
+        console.log(error);
+    }
+}
+
+consumedPromiseFive()
+// async function getAllUser(){
+//     try{
+//         const response = await  fetch('https://jsonplaceholder.typicode.com/users')
+
+//         const data = await response.json()
+//         console.log(data)
+//     } catch(error){
+//         console.log("E:", error);
+//     }
+// }
+// getAllUser()
