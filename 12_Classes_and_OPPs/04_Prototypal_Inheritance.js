@@ -22,4 +22,4 @@ Teacher.name = "vijay"
 console.log(Teacher.name);
 
 //modern syntax
-Object.setPrototype(TeachingSupport, Teacher)
+Object.setPrototype(TeachingSupport, Teacher)  
