@@ -42,5 +42,8 @@ printFullNameTwo.apply(user2, ["sangli", "Maharastra"]);
 
 //bind() method to bind printFullName() with user1
 let func = printFullName.bind(user1);
+let func2 = printFullName.bind(user2)
+
+func2();
 
 setTimeout(func,1000)
