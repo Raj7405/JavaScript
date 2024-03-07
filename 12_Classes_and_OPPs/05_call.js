@@ -34,10 +34,13 @@ const user2 = {
 
 //this is called function borrwing using call()
 printFullNameTwo.call(user1,"kardh", "Maharastra" );
-printFullNameTwo.call(user2, "sangli", "Maharastra");
+
+//borrowing function using apply() method
+//only differece is argument is pass as "ArrayList"
+printFullNameTwo.apply(user2, ["sangli", "Maharastra"]);
 
 
-//bind() function to bind printFullName() with user1
+//bind() method to bind printFullName() with user1
 let func = printFullName.bind(user1);
 
 setTimeout(func,1000)
