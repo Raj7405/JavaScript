@@ -10,10 +10,17 @@ let myDate = new Date()
 let myCreateDate = new Date("12-2-2001")
 console.log(myCreateDate.toLocaleString());
 
+// Date.now() is a static method of the Date object.
+// You cannot use it on a date like myDate.now()
+// The syntax is always Date.now().
 let myTimestamp =Date.now()
 console.log(myTimestamp);
+
+//getTime() returns the number of milliseconds since January 1, 1970 00:00:00.
 let newTime = myCreateDate.getTime()
-console.log(myTimestamp - newTime);
+console.log(newTime)
+let age = myTimestamp - newTime
+console.log(Math.floor(age/(1000*60*60*24*365)));
 
 let newDate = new Date()
 // console.log(newDate);
