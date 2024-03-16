@@ -25,7 +25,8 @@ console.log(Math.floor(age/(1000*60*60*24*365)));
 let newDate = new Date()
 // console.log(newDate);
 // console.log(newDate.getMonth() + 1)
-// console.log(newDate.getDay())
+// console.log(newDate.getDate()) //The getDate() method returns the day of the month (1 to 31) of a date.
+// console.log(newDate.getDay()) //The getDay() method returns the day of the week (0 to 6) of a date.
 // console.log(newDate.getHours());
 // console.log(newDate.getFullYear());
 // console.log(newDate.getUTCHours());
@@ -33,9 +34,9 @@ let newDate = new Date()
 
 //create obeject of date
 
-// let a = newDate.toLocaleString('default', {
-//     weekday: "short",
-//     year: "2-digit"
-// })
+let a = newDate.toLocaleString('default', {
+    weekday: "short",
+    year: "2-digit"
+})
 
-// console.log(a);
+console.log(a);
