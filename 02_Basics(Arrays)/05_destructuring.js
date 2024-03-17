@@ -12,7 +12,7 @@ const myVehicle = {
 }
 
 function detailMyVehicle({brandName,model,price,color: {red}}){
-    console.log(`${brandName}'s ${model} model              in ${red} color is in ${price} only`)
+    console.log(`${brandName}'s ${model} model in ${red} color is in ${price} only`)
 }
 
 detailMyVehicle(myVehicle);
