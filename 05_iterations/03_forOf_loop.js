@@ -11,10 +11,13 @@ for (const num of arr) {
 
 const greetings = "Hello world!"
 for (const greet of greetings) {
-    //console.log(`Each char is ${greet}`)
+    console.log(`Each char is ${greet}`)
 }
 
-// Maps
+// // Maps
+// A Map holds key-value pairs where the keys can be any datatype.
+// A Map remembers the original insertion order of the keys.
+// A Map has a property that represents the size of the map.
 const map1 = new Map([
     [1,"raj"],
     [2,"sonu"],
@@ -32,11 +35,11 @@ map.set('Fr', "France")
 map.set('IN', "India")
 
 
-//console.log(map);
+console.log(map);
 
 //here we distructuring our map
 for (const [key, value] of map) {
-    // console.log(key, ':-', value);
+    console.log(key, ':-', value);
 }
 
 const myObject = {
